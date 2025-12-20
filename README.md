@@ -9,10 +9,8 @@
 
 ## 🔍 Why This Project Matters
 
-Pickmu is **not a demo or academic project**.  
-It is a **production-grade mobile application** designed for real-world logistics, where **real-time location accuracy, background execution, and battery efficiency** are business-critical.
-
-This project demonstrates my ability to **design, build, and ship complex mobile systems** under real operational constraints.
+Pickmu is a production-grade mobile application, actively used by the company for real-world logistics. 
+It demonstrates experience in building high-performance mobile systems, including real-time geolocation, background execution, and scalable architecture.
 
 ---
 
