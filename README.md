@@ -1,131 +1,217 @@
-Pickmu — Mobile Frontend
+# 📦 Pickmu — Mobile Frontend Application
 
-Role: Mobile Frontend Developer
+**Role:** Mobile Frontend Engineer  
+**Platform:** iOS & Android  
+**Status:** Production-ready / Field-tested  
+**Repository Type:** Mobile Client (React Native)
 
-Tech Stack: React Native, Expo, EAS, React Navigation, Context API/Redux, Geolocation APIs
-Project Overview
+---
 
-Pickmu is a delivery mobile app connecting individuals and businesses with nearby riders. Users can request services, track orders in real time, manage profiles and wallets, upload documents, and communicate directly with riders.
+## 🚀 Project Overview
 
-I developed the complete mobile frontend, including all user and rider interfaces, adaptive screens, and integration with APIs. Crucially, I managed the EAS build process for both iOS and Android and handled the deployment to the App Store and Google Play. My core achievement lies in the complex Geolocation and GPS Engineering necessary for real-time, battery-efficient rider tracking.
-Screens Overview
-Authentication Screens
+**Pickmu** is a mobile delivery platform that connects individuals and businesses with nearby riders to perform on-demand and scheduled services (food delivery, package pickup, express shipments, etc.).
 
-    Login: User login via email, Google, or Apple.
+This repository contains the **entire mobile frontend** of the application, covering **both User and Rider experiences**, built from scratch using **React Native with Expo**.
 
-    Register: Create new accounts with email verification.
+My responsibility encompassed:
 
-    Phone Verification: Validate user phone number for security.
+- Full mobile frontend architecture and implementation  
+- Advanced real-time geolocation & GPS engineering  
+- API integration and state management  
+- CI/CD via Expo Application Services (EAS)  
+- Production builds and store deployment (App Store & Google Play)
 
-    Password Recovery: Reset forgotten passwords.
+A core technical challenge — and the main differentiator of this project — was the design of a **high-performance, battery-efficient real-time rider tracking system**, suitable for real-world logistics usage.
 
-    Onboarding Swiper: Introductory slides for new users.
+---
 
-    Intro Screen: Base introduction to the app.
+## 🧱 Tech Stack
 
-User Screens
+- React Native  
+- Expo & EAS  
+- TypeScript  
+- React Navigation  
+- Context API / Redux  
+- Geolocation & Maps APIs  
+- Expo Background Tasks  
+- Push Notifications (EAS)  
+- Webhooks (Real-time Chat)
 
-    Home: Main dashboard showing available services.
+---
 
-    Documents Upload (Docs): Upload identification or service-related documents.
+## 📱 Application Structure
 
-    Order History (Historial): Track past services and deliveries.
+The app is divided into two main operational flows:
 
-    Profile: View and edit user information.
+### 👤 User Application
 
-    Wallet: Manage balance, add funds, and view transactions.
+Users can request services, track orders in real time, manage their profile and wallet, upload documents, and communicate with riders.
 
-    Settings (Ajustes): App configuration options.
+**Key Screens:**
+- Authentication (Login, Register, Phone Verification, Password Recovery)
+- Onboarding & Intro flows
+- Home Dashboard
+- Multi-step Service Request (Onboarding Flow)
+- Real-time Order Tracking
+- Order History
+- Profile & Settings
+- Wallet & Transactions
+- Document Upload
+- Legal & Configuration screens
 
-    Terms & Conditions: Legal information.
+---
 
-    *Multi-step Onboarding (OnBoarding):** Guide users through service requests like food delivery, package pickup, or scheduled shipments.
+### 🏍️ Rider Application
 
-    Current Order Tracking (PedidoEnCurso): Track ongoing orders in real time.
+Riders manage deliveries, track active services, communicate with users/support, and handle vehicle and identity verification.
 
-Rider Screens
+**Key Screens:**
+- Rider Home (Active & Pending Services)
+- Rider Onboarding
+- Profile & Vehicle Management
+- Document Upload & Verification
+- Real-time Chat
+- Wallet & Earnings
+- Service History
+- Settings & Configuration
 
-    Home (inicioRider): Rider dashboard with pending deliveries.
+---
 
-    Profile (perfilRider): Manage personal and vehicle information.
+## ✨ Key Features
 
-    Chat: Real-time communication between riders and users/support using Webhooks.
+- **Fully Adaptive UI**  
+  Responsive layouts across a wide range of Android and iOS devices.
 
-    Vehicle Management (vehiculos): Register and manage vehicles.
+- **Advanced Real-Time Geolocation**  
+  Live tracking of riders and orders with map visualization.
 
-    Documents Upload (Docs): Upload and verify rider documents.
+- **Battery-Efficient GPS Architecture**  
+  Custom-designed dual-mode tracking system for production logistics usage.
 
-    Settings (Ajustes): Configuration options for riders.
+- **Multi-Provider Authentication**  
+  Email, Google, and Apple authentication flows unified under a single state system.
 
-    Wallet: Manage rider balance and transactions.
+- **Real-Time Chat**  
+  Rider ↔ User ↔ Support communication via Webhooks.
 
-    Verification (verificacionRider): Identity and vehicle verification.
+- **Wallet & Transactions**  
+  Balance management, top-ups, and transaction history.
 
-    Rider Onboarding (RiderOnboardingSwiper): Introductory flow specifically for riders.
+- **Push Notifications**  
+  Order updates, chat messages, and system alerts via EAS.
 
-Key Features
+- **Secure File Uploads**  
+  Identity documents, vehicle documents, and images.
 
-    Fully adaptive screens for responsive UI across devices.
+---
 
-    Advanced Geolocation & Maps: Real-time tracking of orders and delivery routes.
+## 🧠 Technical Deep Dive — High-Performance GPS Engineering
 
-    Rider Operational Efficiency: Implemented dual-mode geolocation logic to drastically optimize rider device battery life (low-consumption IDLE mode and high-precision ACTIVE mode).
+A mission-critical component of Pickmu is **continuous rider tracking**, even when the app is backgrounded — without destroying battery life.
 
-    Authentication: Email, Google, and Apple login options.
+### Background Location Persistence
 
-    Real-time Chat: Communication between users, riders, and support via Webhooks.
+- Implemented Expo Background Tasks using `LOCATION_TASK_NAME`
+- Ensures GPS tracking continues when the app is minimized or backgrounded
+- Preserves session state (auth token) to prevent OS task termination
+- Critical for logistics reliability on both iOS and Android
 
-    Vehicle & Document Management: Register, verify, and manage rider information.
+### Dual-Mode Geolocation Strategy
 
-    Wallet Management: View balance, add funds, and manage transactions.
+To balance precision and battery consumption:
 
-    Notifications: Push notifications for updates on services and orders using EAS.
+- **IDLE Mode**
+  - Low-frequency updates
+  - Minimal GPS precision
+  - Used when rider is waiting or inactive
 
-    File Uploads: Upload documents, photos, and other files securely.
+- **ACTIVE Mode**
+  - High-precision tracking
+  - Enabled only during active deliveries
 
-Technical Deep Dive: High-Performance GPS Engineering
+This approach dramatically reduces unnecessary battery drain while maintaining real-time accuracy when it matters.
 
-To ensure the mission-critical stability and efficiency of the Rider application, I engineered the following low-level solutions:
+### Network & Battery Optimization (Batching)
 
-    Background Persistence and Stability: Utilized Expo Background Task (LOCATION_TASK_NAME) to maintain active geolocation and session state (token) even when the app is backgrounded. This prevents the OS from killing the app, ensuring continuous tracking—a major challenge in logistics apps.
+- Implemented a location batching system
+- GPS updates are queued (`updatesQueue`)
+- Up to **3 location points** are sent in a **single request every 5 seconds**
+- Reduces network overhead, battery usage, and backend load
 
-    Network and Battery Optimization (Batching): The code dynamically manages GPS precision and employs a batching system (updatesQueue). This system collects up to 3 location updates and sends them in a single optimized network request every 5 seconds, significantly reducing resource drain and data usage.
+---
 
-    Deployment and Build Management: Handled the entire EAS (Expo Application Services) workflow, including custom development builds and final production builds for store submission, ensuring a smooth Continuous Integration/Continuous Delivery (CI/CD) process.
+## ⚙️ Build, Deployment & CI/CD
 
-Visual Interface & Real-World Testing
+- Managed the entire EAS workflow
+- Custom development builds for advanced debugging
+- Production builds for:
+  - Apple App Store
+  - Google Play Store
+- Ensured compatibility with background services and platform-specific requirements
+- Strict testing flow for iOS background geolocation using dev-client builds
 
-The following images showcase the final production UI. These are actual screenshots provided by the Pickmu team, captured during live field tests and stress-testing scenarios to validate the geolocation accuracy and user flow.
+---
 
-<p align="center"> <img src="assets/pickmu1.png" width="32%" /> <img src="assets/pickmu2.png" width="32%" /> <img src="assets/pickmu3.png" width="32%" /> <br /> <small><i>1. Login | 2. User Home | 3. Delivery Selection</i></small> </p>
+## 🧪 Real-World Testing & Validation
 
-<p align="center"> <img src="assets/pickmu4.png" width="32%" /> <img src="assets/pickmu5.png" width="32%" /> <img src="assets/pickmu6.png" width="32%" /> <br /> <small><i>4. Real-time Tracking | 5. User Order History | 6. Rider Home</i></small> </p>
+The UI and tracking system were tested during **live field operations**, including:
 
-<p align="center"> <img src="assets/pickmu7.png" width="32%" /> <img src="assets/pickmu8.png" width="32%" /> <img src="assets/pickmu9.png" width="32%" /> <br /> <small><i>7. Rider Service Offer | 8. Active Service Menu | 9. Rider History</i></small> </p>
+- Real delivery routes
+- Background execution stress tests
+- Battery consumption analysis
+- Network instability scenarios
 
-    Note: These captures represent real use cases, demonstrating the adaptive interface and the real-time tracking system in production environments.
+The screenshots below are **real production captures**, provided by the Pickmu team during testing phases.
 
-Challenges and Solutions
+<p align="center">
+  <img src="assets/pickmu1.png" width="32%" />
+  <img src="assets/pickmu2.png" width="32%" />
+  <img src="assets/pickmu3.png" width="32%" />
+  <br />
+  <small><i>Login · User Home · Service Selection</i></small>
+</p>
 
-During development, I faced several challenges:
+<p align="center">
+  <img src="assets/pickmu4.png" width="32%" />
+  <img src="assets/pickmu5.png" width="32%" />
+  <img src="assets/pickmu6.png" width="32%" />
+  <br />
+  <small><i>Real-Time Tracking · Order History · Rider Home</i></small>
+</p>
 
-    Integrating advanced geolocation and real-time tracking: Ensuring accurate location updates and map rendering on both Android and iOS while maximizing battery life.
+<p align="center">
+  <img src="assets/pickmu7.png" width="32%" />
+  <img src="assets/pickmu8.png" width="32%" />
+  <img src="assets/pickmu9.png" width="32%" />
+  <br />
+  <small><i>Rider Service · Active Order · Rider History</i></small>
+</p>
 
-        Solution: Implemented Dual (IDLE/ACTIVE) geolocation logic for performance and battery saving, coupled with a Background Task to maintain tracking persistence.
+---
 
-    Adaptive UI for multiple screen sizes: Some components did not scale correctly on smaller devices. Solved by using responsive layouts and dynamic styling.
+## 🧩 Challenges & Solutions
 
-    Authentication across multiple providers: Implementing Google, Apple, and email login in a single flow was complex. Used proper libraries and context-based state management to unify authentication logic.
+| Challenge | Solution |
+|--------|---------|
+| Background GPS reliability | Expo Background Tasks + session persistence |
+| Battery drain | Dual-mode tracking (IDLE / ACTIVE) |
+| Multi-provider authentication | Unified auth logic via Context/Redux |
+| Adaptive UI issues | Responsive layouts and dynamic styling |
+| Push notifications | EAS integration with cross-platform testing |
+| iOS background testing | Dev-client builds + strict install flow |
 
-    Push notifications via EAS: Ensuring notifications were delivered correctly for order updates and chat required proper integration and testing across platforms.
+---
 
-    Build Process and Testing: Given the complexity of background geolocation, a strict installation flow was required for iOS testing, involving enabling Developer Mode and executing the JS bundle using npx expo start --dev-client for correct loading and real-time debugging.
+## 🤝 Acknowledgements
 
-Thanks to Fernando (backend developer) for providing support with API endpoints, debugging and backend integration, which made development much smoother.
-Author
+Special thanks to **Fernando** (Backend Engineer) for support with API design, debugging, and backend integration, which significantly streamlined frontend development.
 
-[Jolmo]
+---
 
-[Portfolio Link]
+## 👤 Author
 
-[GitHub Link]
+**Jolmo**  
+Mobile Frontend Engineer
+
+- 🌐 Portfolio: *(add link)*
+- 💻 GitHub: *(add link)*
