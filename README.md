@@ -35,15 +35,14 @@ A key technical challenge — and the main differentiator of this project — wa
 
 ---
 
-## 🖥️ Aplicación en producción
+## 🖥️ Production Application
 
-La aplicación **Pickmu** está actualmente **en uso real por la empresa** para operaciones logísticas.  
-Se trata de la versión final de la app, disponible para descarga en **Apple App Store** y **Google Play Store**, incluyendo todos los flujos de usuario y repartidor.
+The **Pickmu** app is currently **actively used by the company** for logistics operations.  
+This is the final production version, available for download on the **Apple App Store** and **Google Play Store**, including all User and Rider flows.
 
-Esto permite evaluar directamente la **experiencia de usuario, el rastreo en tiempo real, la gestión de pedidos y todas las funcionalidades de producción**, demostrando el impacto real de este proyecto.
+This allows evaluators to directly experience **user interactions, real-time tracking, order management, and all production functionalities**, demonstrating the real-world impact of this project.
 
-> Nota: Esta sección está destinada a la evaluación técnica del frontend. No se requiere acceso a datos sensibles de clientes para explorar la aplicación.
-
+> Note: This section is intended for frontend technical evaluation. No access to sensitive customer data is required to explore the application.
 ---
 
 ## 🧱 Tech Stack
@@ -90,7 +89,7 @@ Rider onboarding, active & pending services, real-time tracking, chat, wallet & 
 - **Multi-Provider Authentication**  
   Email, Google, and Apple authentication under a unified auth flow.
 
-- **Real-Time Chat**  
+- **Real-Time Communication**  
   Rider ↔ User ↔ Support communication.
 
 - **Wallet & Transactions**  
@@ -231,13 +230,7 @@ Special thanks to **Fernando** (Pickmu CTO) for collaboration on API design, deb
 
 ## 👤 Author
 
-**Jolmo**  
-Mobile Frontend Engineer
+**Jolmo** 
+- 🌐 Portfolio: https://jolmol.com
+- 💻 GitHub: https://github.com/jolmoo
 
-- Focused on high-performance mobile systems
-- Strong experience with real-time geolocation & background execution
-- Interested in large-scale consumer and logistics products
-
-- 🌐 Portfolio: https://your-portfolio-link
-- 💻 GitHub: https://github.com/your-username
-- 💼 LinkedIn: https://linkedin.com/in/your-profile
