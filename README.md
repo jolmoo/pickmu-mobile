@@ -164,25 +164,25 @@ The UI and tracking system were tested during **live field operations**, includi
 The screenshots below are **real production captures**, provided by the Pickmu team during testing phases.
 
 <p align="center">
-  <img src="assets/pickmu1.png" width="32%" />
-  <img src="assets/pickmu2.png" width="32%" />
-  <img src="assets/pickmu3.png" width="32%" />
+  <img src="assets/pickmu1.jpg" width="32%" />
+  <img src="assets/pickmu2.jpg" width="32%" />
+  <img src="assets/pickmu3.jpg" width="32%" />
   <br />
   <small><i>Login · User Home · Service Selection</i></small>
 </p>
 
 <p align="center">
-  <img src="assets/pickmu4.png" width="32%" />
-  <img src="assets/pickmu5.png" width="32%" />
-  <img src="assets/pickmu6.png" width="32%" />
+  <img src="assets/pickmu4.jpg" width="32%" />
+  <img src="assets/pickmu5.jpg" width="32%" />
+  <img src="assets/pickmu6.jpg" width="32%" />
   <br />
   <small><i>Real-Time Tracking · Order History · Rider Home</i></small>
 </p>
 
 <p align="center">
-  <img src="assets/pickmu7.png" width="32%" />
-  <img src="assets/pickmu8.png" width="32%" />
-  <img src="assets/pickmu9.png" width="32%" />
+  <img src="assets/pickmu7.jpg" width="32%" />
+  <img src="assets/pickmu8.jpg" width="32%" />
+  <img src="assets/pickmu9.jpg" width="32%" />
   <br />
   <small><i>Rider Service · Active Order · Rider History</i></small>
 </p>
