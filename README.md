@@ -168,7 +168,7 @@ The screenshots below are **real production captures**, provided by the Pickmu t
   <img src="assets/pickmu2.jpg" width="32%" />
   <img src="assets/pickmu3.jpg" width="32%" />
   <br />
-  <small><i>Login · User Home · Service Selection</i></small>
+  <small><i>Login · User Home · Location Selection</i></small>
 </p>
 
 <p align="center">
