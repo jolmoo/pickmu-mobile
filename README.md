@@ -1,7 +1,7 @@
 # Pickmu — Mobile Frontend
 
 **Role:** Mobile Frontend Developer  
-**Tech Stack:** React Native, Expo, EAS, React Navigation, Context API/Redux, Geolocation APIs, Real-time Chat  
+**Tech Stack:** React Native, Expo, EAS, React Navigation, Context API/Redux, Geolocation APIs  
 
 ---
 
@@ -83,11 +83,10 @@ During development, I faced several challenges:
     > **Solution:** Implemented **Dual (IDLE/ACTIVE) geolocation logic** for performance and battery saving, coupled with a **Background Task** to maintain tracking persistence.
 2. **Adaptive UI for multiple screen sizes:** Some components did not scale correctly on smaller devices. Solved by using responsive layouts and dynamic styling.  
 3. **Authentication across multiple providers:** Implementing Google, Apple, and email login in a single flow was complex. Used proper libraries and context-based state management to unify authentication logic.  
-4. **Real-time chat integration with Webhooks:** Ensuring messages sync correctly between users and riders required careful handling of API calls, state updates, and webhook events.  
-5. **Push notifications via EAS:** Ensuring notifications were delivered correctly for order updates and chat required proper integration and testing across platforms.
-6. **Build Process and Testing:** Given the complexity of background geolocation, a strict installation flow was required for iOS testing, involving enabling **Developer Mode** and executing the JS bundle using `npx expo start --dev-client` for correct loading and real-time debugging.
+4. **Push notifications via EAS:** Ensuring notifications were delivered correctly for order updates and chat required proper integration and testing across platforms.
+5. **Build Process and Testing:** Given the complexity of background geolocation, a strict installation flow was required for iOS testing, involving enabling **Developer Mode** and executing the JS bundle using `npx expo start --dev-client` for correct loading and real-time debugging.
 
-Thanks to **Fernando (backend developer)** for providing support with API endpoints, debugging, Webhooks, and backend integration, which made development much smoother.  
+Thanks to **Fernando (backend developer)** for providing support with API endpoints, debugging and backend integration, which made development much smoother.  
 
 ---
 
