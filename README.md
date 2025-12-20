@@ -35,7 +35,7 @@ A core technical challenge — and the main differentiator of this project — w
 - Geolocation & Maps APIs  
 - Expo Background Tasks  
 - Push Notifications (EAS)  
-- Webhooks (Real-time Chat)
+
 
 ---
 
@@ -204,7 +204,7 @@ The screenshots below are **real production captures**, provided by the Pickmu t
 
 ## 🤝 Acknowledgements
 
-Special thanks to **Fernando** (Backend Engineer) for support with API design, debugging, and backend integration, which significantly streamlined frontend development.
+Special thanks to **Fernando** (PickMu's CTO) for support with API design, debugging, and backend integration, which significantly streamlined frontend development.
 
 ---
 
