@@ -168,23 +168,29 @@ The screenshots below are **real production captures**, provided by the Pickmu t
   <img src="assets/pickmu2.jpg" width="32%" />
   <img src="assets/pickmu3.jpg" width="32%" />
   <br />
-  <small><i>Login · User Home · Location Selection</i></small>
+  <small><i>Login · User Home · Package Details</i></small>
 </p>
 
 <p align="center">
   <img src="assets/pickmu4.jpg" width="32%" />
-  <img src="assets/pickmu6.jpg" width="32%" />
+  <img src="assets/pickmu5.jpg" width="32%" />
   <img src="assets/pickmu6.jpg" width="32%" />
   <br />
-  <small><i>Real-Time Tracking · Order History · Rider Home</i></small>
+  <small><i>Address Selection · Real-Time Tracking · Order History</i></small>
 </p>
 
 <p align="center">
-  <img src="assets/pickmu5.jpg" width="32%" />
-  <img src="assets/pickmu8.jpg" width="32%" />
   <img src="assets/pickmu7.jpg" width="32%" />
+  <img src="assets/pickmu8.jpg" width="32%" />
+  <img src="assets/pickmu9.jpg" width="32%" />
   <br />
-  <small><i>Rider Service · Active Order · Rider History</i></small>
+  <small><i>Rider Home · Rider Service Request · Rider In-Service</i></small>
+</p>
+
+<p align="center">
+  <img src="assets/pickmu10.jpg" width="32%" />
+  <br />
+  <small><i>Rider History</i></small>
 </p>
 
 ---
