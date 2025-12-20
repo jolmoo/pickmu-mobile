@@ -35,6 +35,17 @@ A key technical challenge — and the main differentiator of this project — wa
 
 ---
 
+## 🖥️ Aplicación en producción
+
+La aplicación **Pickmu** está actualmente **en uso real por la empresa** para operaciones logísticas.  
+Se trata de la versión final de la app, disponible para descarga en **Apple App Store** y **Google Play Store**, incluyendo todos los flujos de usuario y repartidor.
+
+Esto permite evaluar directamente la **experiencia de usuario, el rastreo en tiempo real, la gestión de pedidos y todas las funcionalidades de producción**, demostrando el impacto real de este proyecto.
+
+> Nota: Esta sección está destinada a la evaluación técnica del frontend. No se requiere acceso a datos sensibles de clientes para explorar la aplicación.
+
+---
+
 ## 🧱 Tech Stack
 
 ### Core Technologies
