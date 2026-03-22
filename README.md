@@ -133,6 +133,11 @@ To minimize battery drain without sacrificing accuracy:
 - Significantly reduces battery usage, network overhead, and backend load
 
 ---
+## 📁 Code Sample
+
+The GPS engine is available as a standalone module → [`gps/locationEngine.js`](./gps/locationEngine.js)
+
+---
 
 ## ⚙️ Build, Deployment & CI/CD
 
